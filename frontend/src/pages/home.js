@@ -47,8 +47,8 @@ const Home = () => {
                         </div><br /><br />
                         <div class="container">
                             <h1 class="design_taital">Our Work Furniture</h1>
-                            <p class="design_text">There are many variations of passages of Lorem Ipsum available, but the
-                                majority have suffered alteratio</p>
+                            <p class="design_text">Shop our stylist's collection of must-have pieces for this season.
+                                Favourites include easy-care aluminium, on-trend teak outdoor furniture, textured rope outdoor settings, and low-maintenance outdoor wicker furniture pieces.</p>
 
                             <div class="design_section_2">
                                 <div class="row">
