@@ -1,4 +1,28 @@
+import React, { useState } from 'react';
+import axios from 'axios';
 const Login = () => {
+
+    const [input1, setInput1] = useState('');
+    const [input2, setInput2] = useState('');
+
+
+    const sendData = async (event) => {
+        event.preventDefault();
+        try {
+            const response = await axios.post('/login', {
+                Name: input1,
+                Password: input2,
+
+            });
+            console.log(response.data); // Log the response data if needed
+            // Reset the input values after successful submission
+            setInput1('');
+            setInput2('');
+
+        } catch (error) {
+            console.error(error);
+        }
+    };
     return (
         <div>
             <br />
@@ -7,16 +31,16 @@ const Login = () => {
             <div class="container">
                 <div class="login-box">
                     <h2>Login</h2>
-                    <form>
+                    <form onSubmit={sendData}>
                         <div class="user-box">
-                            <input type="text" name="" required="" />
+                            <input type="text" value={input1} onChange={(e) => setInput1(e.target.value)} />
                             <label>Username</label>
                         </div>
                         <div class="user-box">
-                            <input type="password" name="" required="" />
+                            <input type="password" value={input2} onChange={(e) => setInput2(e.target.value)} />
                             <label>Password</label>
                         </div>
-                        <button onClick={() => console.log('Button clicked!')} style={{ textDecoration: 'underline', color: 'blue', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
+                        <button onClick={() => console.log('Button clicked!')} style={{ textDecoration: 'underline', color: 'black', border: 'none', backgroundColor: 'transparent', cursor: 'pointer' }}>
                             Submit
                         </button>
 

@@ -5,6 +5,7 @@
 
 @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
 @font-face {
     font-family: "Righteous";
     src: url("../fonts/BalooChettan-Regular.ttf");
@@ -117,7 +118,7 @@ h4 a,
 h5 a,
 h6 a {
     color: #212121;
-    text-decoration: none!important;
+    text-decoration: none !important;
     opacity: 1
 }
 
@@ -162,7 +163,7 @@ img {
     height: auto;
 }
 
- :focus {
+:focus {
     outline: 0;
 }
 
@@ -238,7 +239,7 @@ button {
 }
 
 .bg-light {
-    background-color: #7c2c0c!important;
+    background-color: #7c2c0c !important;
 }
 
 .navbar {
@@ -516,10 +517,28 @@ button {
     border: transparent;
 }
 
-.chair_text {
+.chair_title {
     width: 100%;
     font-size: 18px;
-    color: #7c2c0c;
+    color: #be4f0e;
+    text-align: center;
+    margin: 0px;
+    font-weight: 500;
+}
+
+.chair_text {
+    width: 100%;
+    font-size: 13px;
+    color: #0a0909;
+    text-align: center;
+    margin: 0px;
+    font-weight: 500;
+}
+
+.chair_price {
+    width: 100%;
+    font-size: 16px;
+    color: #bad619;
     text-align: center;
     margin: 0px;
     font-weight: 500;
@@ -815,6 +834,7 @@ input.email_text::placeholder {
 }
 
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
 #social {
     margin: 20px 0px;
 }
@@ -999,4 +1019,3 @@ a.facebookBtn.smGlobalBtn.active {
 
 
 /* copyright section end */
-

@@ -7,6 +7,8 @@ import Login from "./pages/login";
 import Contact from "./pages/contact";
 import AddFur from "./pages/addfur";
 import Added from "./pages/added";
+import Search from "./pages/search";
+import Result from "./pages/searchresult";
 import reportWebVitals from './reportWebVitals';
 
 
@@ -20,6 +22,8 @@ export default function App() {
         <Route path="login" element={<Login />} />
         <Route path="addfur" element={<AddFur />} />
         <Route path="added" element={<Added />} />
+        <Route path="search" element={<Search />} />
+        <Route path="searchresult" element={<Result />} />
 
       </Routes>
     </BrowserRouter>
