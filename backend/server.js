@@ -1,9 +1,10 @@
 import express from 'express'
 const app = express()
-import path from 'path'
-let url = 'mongodb+srv://abidzied23:i7a2LBpHcDqVodDp@cluster0.dltp0tt.mongodb.net/furniture?retryWrites=true&w=majority';
+import 'dotenv/config'
+
+const url = process.env.Mongo_url;
 import furnitur from './models/furniture_Schema.js'
-import users from './models/users_schema.js'
+import authRouter from './routes/authroute.js';
 import mongoose from "mongoose"
 import cors from "cors"
 import bodyParser from 'body-parser';
@@ -35,7 +36,8 @@ app.post('/addfur', bodyParser.urlencoded({ extended: true }), (req, res) => {
     fur.save();
     res.send("success")
 })
-app.post('/contact', bodyParser.urlencoded({ extended: true }), (req, res) => {
+app.use("/auth", authRouter)
+/*app.post('/contact', bodyParser.urlencoded({ extended: true }), (req, res) => {
 
 
     console.log(req.body);
@@ -71,7 +73,7 @@ app.post('/login', bodyParser.urlencoded({ extended: true }), (req, res) => {
     person_verif(req.body.Name);
 
 
-})
+})*/
 
 let data = [];
 app.get('/', (req, res) => {
