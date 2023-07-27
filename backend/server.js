@@ -1,15 +1,15 @@
 import express from 'express'
-const app = express()
+
 import 'dotenv/config'
 
-const url = process.env.Mongo_url;
+
 import furnitur from './models/furniture_Schema.js'
 import authRouter from './routes/authroute.js';
 import mongoose from "mongoose"
 import cors from "cors"
 import bodyParser from 'body-parser';
-
-
+const url = process.env.Mongo_url;
+const app = express()
 
 
 
