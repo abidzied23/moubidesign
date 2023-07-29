@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:cc94fa028f5e9f760f20be4c2bd173375fd5e1a775980ea0773eeb81265d11ebd5b0f4cd9d524ccf9f52c33fe6689f7727eccbcce13b52b58e05b72c54ac3220#npm:18.2.0"],\
           ["react-router-dom", "virtual:cc94fa028f5e9f760f20be4c2bd173375fd5e1a775980ea0773eeb81265d11ebd5b0f4cd9d524ccf9f52c33fe6689f7727eccbcce13b52b58e05b72c54ac3220#npm:6.14.2"],\
           ["react-scripts", "virtual:cc94fa028f5e9f760f20be4c2bd173375fd5e1a775980ea0773eeb81265d11ebd5b0f4cd9d524ccf9f52c33fe6689f7727eccbcce13b52b58e05b72c54ac3220#npm:5.0.1"],\
+          ["rimraf", "npm:5.0.1"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
         "linkType": "SOFT"\
@@ -15541,6 +15542,14 @@ const RAW_RUNTIME_STATE =
           ["glob", "npm:7.2.3"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:5.0.1", {\
+        "packageLocation": "../../../../C:/Users/abid/AppData/Local/Yarn/Berry/cache/rimraf-npm-5.0.1-26fb251a1d-10c0.zip/node_modules/rimraf/",\
+        "packageDependencies": [\
+          ["rimraf", "npm:5.0.1"],\
+          ["glob", "npm:10.3.3"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["rollup", [\
@@ -15595,6 +15604,7 @@ const RAW_RUNTIME_STATE =
           ["react-dom", "virtual:cc94fa028f5e9f760f20be4c2bd173375fd5e1a775980ea0773eeb81265d11ebd5b0f4cd9d524ccf9f52c33fe6689f7727eccbcce13b52b58e05b72c54ac3220#npm:18.2.0"],\
           ["react-router-dom", "virtual:cc94fa028f5e9f760f20be4c2bd173375fd5e1a775980ea0773eeb81265d11ebd5b0f4cd9d524ccf9f52c33fe6689f7727eccbcce13b52b58e05b72c54ac3220#npm:6.14.2"],\
           ["react-scripts", "virtual:cc94fa028f5e9f760f20be4c2bd173375fd5e1a775980ea0773eeb81265d11ebd5b0f4cd9d524ccf9f52c33fe6689f7727eccbcce13b52b58e05b72c54ac3220#npm:5.0.1"],\
+          ["rimraf", "npm:5.0.1"],\
           ["web-vitals", "npm:2.1.4"]\
         ],\
         "linkType": "SOFT"\

@@ -16,6 +16,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
+    "clean": "rimraf build",
     "eject": "react-scripts eject",
     "eslint": "eslint "
   },
@@ -41,6 +42,8 @@
     "eslint": "^8.46.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-plugin-react": "^7.33.0",
-    "react-router-dom": "^6.14.1"
-  }
+    "react-router-dom": "^6.14.1",
+    "rimraf": "^5.0.1"
+  },
+  "packageManager": "yarn@3.6.1"
 }
