@@ -10,7 +10,7 @@ const AddFur = () => {
     const sendData = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('/addfur', {
+            const response = await axios.post('http://localhost:5000/addfur', {
                 type: input1,
                 description: input2,
                 image_url: input3,

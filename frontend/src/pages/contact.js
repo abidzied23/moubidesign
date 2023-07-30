@@ -12,7 +12,7 @@ const Contact = () => {
     const sendData = async (event) => {
         event.preventDefault();
         try {
-            const response = await axios.post('/contact', {
+            const response = await axios.post('http://localhost:5000/contact', {
                 Name: input1,
                 Email: input2,
                 Password: input3,

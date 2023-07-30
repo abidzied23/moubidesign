@@ -13,19 +13,20 @@ export const signUp = async (req, res) => {
         if (olduser) {
             return res.status(409).send("User Already Exist. Please Login");
         }
+        console.log("good")
 
         const encryptedpassword = await bcrypt.hash(Password, 10);
 
         const newuser = await users.create({
             Name,
-            Email: Email.tolowercase(),
+            Email,
             Password: encryptedpassword,
             Phone_Number,
             Massage
         });
 
         const token = jwt.sign(
-            { user_id: user._id, Email },
+            { newuser_id: newuser._id, Email },
             process.env.TOKEN_KEY,
             {
                 expiresIn: "2h",
@@ -48,21 +49,21 @@ export const login = async (req, res) => {
     try {
         console.log("arrived")
 
-        const { email, password } = req.body;
+        const { Email, Password } = req.body;
 
 
 
-        if (!(email && password)) {
+        if (!(Email && Password)) {
             res.status(400).send("All input is required");
         }
 
-        const user = await userModel.findOne({ email: email });
+        const user = await users.findOne({ Email: Email });
 
 
-        if (user && (await bcrypt.compare(password, user.password))) {
+        if (user && (await bcrypt.compare(Password, user.Password))) {
 
             const token = jwt.sign(
-                { user_id: user._id, email },
+                { user_id: user._id, Email },
                 process.env.TOKEN_KEY,
                 {
                     expiresIn: "2h",
@@ -73,9 +74,11 @@ export const login = async (req, res) => {
             user.token = token;
 
 
-            res.status(200).send(user);
+            //res.status(200).send(user);
+            console.log("user verified")
         }
         res.status(400).send("Invalid Credentials");
+        console.log("invalid user")
     } catch (err) {
         console.log(err);
     }

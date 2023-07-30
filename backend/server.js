@@ -2,9 +2,9 @@ import express from 'express'
 
 import 'dotenv/config'
 
-
+import { login, signUp } from "./controllers/authcontrol.js";
 import furnitur from './models/furniture_Schema.js'
-import authRouter from './routes/authroute.js';
+//import authRouter from './routes/authroute.js';
 import mongoose from "mongoose"
 import cors from "cors"
 import bodyParser from 'body-parser';
@@ -36,7 +36,8 @@ app.post('/addfur', bodyParser.urlencoded({ extended: true }), (req, res) => {
     fur.save();
     res.send("success")
 })
-app.use("/auth", authRouter)
+app.post("/login", bodyParser.urlencoded({ extended: true }), login);
+app.post("/contact", bodyParser.urlencoded({ extended: true }), signUp);
 /*app.post('/contact', bodyParser.urlencoded({ extended: true }), (req, res) => {
 
 
