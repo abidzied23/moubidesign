@@ -1,5 +1,10 @@
 version: 1
 buildCommand:
+  - npm run build
   - yarn install --frozen-lockfile
   - yarn build
-startCommand: yarn start
+startCommand: npm start
+routes:
+  - src: /.*      # Match all paths
+    dest: /index.html  # Send all unmatched paths to index.html
+    status: 200        # Use a 200 status code for the rewrite
