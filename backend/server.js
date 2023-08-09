@@ -1,4 +1,7 @@
 import express from 'express'
+import path from 'path'
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
 
 import 'dotenv/config'
 
@@ -75,8 +78,17 @@ app.post('/login', bodyParser.urlencoded({ extended: true }), (req, res) => {
 
 
 })*/
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 let data = [];
+app.get('*', (req, res) => {
+    const filePath = path.join(__dirname, '../frontend/build', 'index.html');
+    res.sendFile(filePath);
+
+})
+
 app.get('/', (req, res) => {
     furnitur.find().then(doc => {
         //console.log(doc)
@@ -119,5 +131,5 @@ app.get('/searchresult', async (req, res) => {
 
 
 
-
-app.listen(5000, () => console.log("server connected"))
+const port = process.env.PORT || 5000;
+app.listen(port, () => console.log("server connected"))
